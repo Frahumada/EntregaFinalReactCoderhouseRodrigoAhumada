@@ -1,6 +1,5 @@
 import NavBar from "./components/NavBar/NavBar.jsx";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer.jsx";
-import "./App.css";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -12,10 +11,18 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<ItemListContainer greeting={"Bienvenidos"} />}
+            element={
+              <ItemListContainer greeting={"Bienvenidos al ItemListConainer"} />
+            }
           />
           <Route
-            path="/category/:categoryId"
+            path="/productos"
+            element={
+              <ItemListContainer greeting={"Bienvenidos al ItemListConainer"} />
+            }
+          />
+          <Route
+            path="/productos/:category"
             element={
               <ItemListContainer greeting={"Listado de productos FILTRADOS"} />
             }
@@ -28,14 +35,3 @@ function App() {
 }
 
 export default App;
-
-// const App = () => {
-//   return (
-//     <>
-//     <NavBar/>
-//     <ItemListContainer greeting={"Bienvenidos"}/>
-//     </>
-//   )
-// };
-
-// export default App;

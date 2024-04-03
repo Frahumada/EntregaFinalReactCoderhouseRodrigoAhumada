@@ -1,18 +1,22 @@
-import { Link } from "react-router-dom"
-import CartWidget from "../CartWidget/CartWidget.jsx"
+import { Link } from "react-router-dom";
+import CartWidget from "../CartWidget/CartWidget.jsx";
 const NavBar = () => {
-    return (
-        <nav>
-            <h3>Impresiones</h3>
-            <div>
-                <Link to={"/category/libro"} type="button" class="btn btn-dark">Libros</Link>
-                <Link to={"/category/pelicula"} type="button" class="btn btn-dark">Peliculas</Link>
-                <Link to={"/category/musica"} type="button" class="btn btn-dark">Musica</Link>
+  return (
+    <div className="w-100">
+       <nav className="w-100 navbar navbar-dark bg-dark align-items-center justify-content-center">
+      <h3>Impresiones</h3>
+            <div className="align-items-center">
+            <Link to={`/productos`} className="btn btn-dark m-1">Productos</Link>
+            <Link to={`/productos/libros`} className="btn btn-dark m-1">Libros</Link>
+            <Link to={`/productos/peliculas`} className="btn btn-dark m-1">Peliculas</Link>
+            <Link to={`/productos/musica`} className="btn btn-dark m-1">Musica</Link>
+            <Link to={`/productos/otro`} className="btn btn-dark m-1">Otro</Link>
             </div>
             <CartWidget/>
-        </nav>
-    )
+    </nav> 
+    </div>
+    
+  );
+};
 
-}
-
-export default NavBar
+export default NavBar;

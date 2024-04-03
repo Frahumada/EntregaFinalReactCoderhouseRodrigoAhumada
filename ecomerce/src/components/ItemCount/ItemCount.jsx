@@ -18,11 +18,13 @@ const Contador = ({ initial = 1, stock }) => {
 
   return (
     <>
-      <button onClick={incrementar}> + </button>
+    <div className="d-flex">
+      <button className="btn btn-dark" onClick={incrementar}> + </button>
 
-      <h2>{contador}</h2>
+      <h2 className="px-5">{contador}</h2>
 
-      <button onClick={decrementar}> - </button>
+      <button className="btn btn-dark" onClick={decrementar}> - </button>
+    </div>
     </>
   );
 };

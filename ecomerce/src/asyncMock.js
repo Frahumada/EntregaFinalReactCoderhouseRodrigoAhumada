@@ -3,8 +3,8 @@ const products = [
       id: "1",
       name: "Harry Potter 1",
       price: 1000,
-      category: "libro",
-      img: "https://itechstore.com.ar/wp-content/uploads/2020/06/iphone-12-pro-gold-hero-600x710.png",
+      category: "libros",
+      img: "https://es.web.img2.acsta.net/pictures/14/04/30/11/55/592219.jpg",
       stock: 2,
       description: "Descripcion de HP1",
     },
@@ -12,8 +12,8 @@ const products = [
       id: "2",
       name: "Harry Potter 2",
       price: 2500,
-      category: "libro",
-      img: "https://itechstore.com.ar/wp-content/uploads/2020/06/iphone-12-pro-gold-hero-600x710.png",
+      category: "libros",
+      img: "https://musicart.xboxlive.com/7/12d85000-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080",
       stock: 25,
       description: "Descripcion de HP2",
     },
@@ -21,8 +21,8 @@ const products = [
       id: "3",
       name: "Harry Potter 3",
       price: 3000,
-      category: "pelicula",
-      img: "https://itechstore.com.ar/wp-content/uploads/2020/06/iphone-12-pro-gold-hero-600x710.png",
+      category: "peliculas",
+      img: "https://es.web.img2.acsta.net/pictures/14/04/30/11/36/185120.jpg",
       stock: 15,
       description: "Descripcion de HP3",
     },
@@ -31,7 +31,7 @@ const products = [
       name: "Harry Potter musical",
       price: 500,
       category: "musica",
-      img: "https://itechstore.com.ar/wp-content/uploads/2020/06/iphone-12-pro-gold-hero-600x710.png",
+      img: "https://i.ytimg.com/vi/h1Xm9ynJKDM/maxresdefault.jpg",
       stock: 5,
       description: "Descripcion de HPMusical",
     },
@@ -46,10 +46,10 @@ const products = [
     });
   };
   
-  export const getProductsByCategory = (categoryId) => {
+  export const getProductsByCategory = (category) => {
     return new Promise((resolve) => {
       setTimeout(() => {
-        resolve(products.filter(prod => prod.category === categoryId));
+        resolve(products.filter(prod => prod.category === category));
       }, 1000);
     });
   };
