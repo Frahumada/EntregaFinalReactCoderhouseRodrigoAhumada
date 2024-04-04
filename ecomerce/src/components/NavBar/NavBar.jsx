@@ -3,7 +3,7 @@ import CartWidget from "../CartWidget/CartWidget.jsx";
 const NavBar = () => {
   return (
     <div className="w-100">
-       <nav className="w-100 navbar navbar-dark bg-dark align-items-center justify-content-center">
+       <nav className="w-100 navbar navbar-dark bg-danger align-items-center justify-content-center">
       <h3>Impresiones</h3>
             <div className="align-items-center">
             <Link to={`/productos`} className="btn btn-dark m-1">Productos</Link>
