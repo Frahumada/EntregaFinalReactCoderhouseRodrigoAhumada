@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget.jsx";
+import { CartContext } from "../../Context/CartContext.jsx";
+import { useContext } from "react";
+
 const NavBar = () => {
+  const user = useContext(CartContext);
+  console.log(user);
   return (
     <div className="w-100">
        <nav className="w-100 navbar navbar-dark bg-danger align-items-center justify-content-center">
