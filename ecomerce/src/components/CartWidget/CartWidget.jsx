@@ -1,10 +1,15 @@
-import cart from './Assets/cart4.svg';
+import cart from "./Assets/cart4.svg";
+import { Link } from "react-router-dom";
 
 const CartWidget = () => {
-    return (
-        <>
-        <img src= {cart} alt="Imagen carrito" />
-        </>
-    ) 
+
+  return (
+    <>
+      <Link to="/carrito">
+        <img src={cart} alt="Imagen carrito" />
+      </Link>
+    </>
+    
+  );
 };
 export default CartWidget;

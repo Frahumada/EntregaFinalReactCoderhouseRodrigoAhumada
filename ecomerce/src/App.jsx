@@ -2,20 +2,17 @@ import NavBar from "./components/NavBar/NavBar.jsx";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer.jsx";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer.jsx";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
-import { useState } from "react";
-import {CartContext } from "./Context/CartContext.jsx";
+import Cart from "./components/Cart/Cart.jsx";
+import { CartProvider } from "./Context/CartContext.jsx";
 
 
 
 function App() {
-  const [carrito,setCarrito] = useState([]);
-
-
   return (
     
     <>
         <BrowserRouter>
-        <CartContext.Provider value={{carrito, setCarrito}}>
+        <CartProvider>
           <NavBar />
           <Routes>
             <Route
@@ -37,9 +34,12 @@ function App() {
               }
             />
             <Route path="/detail/:productId" element={<ItemDetailContainer />} />
+            
+            <Route path="/carrito" element={<Cart />} />
+              
           </Routes>
 
-        </CartContext.Provider>
+          </CartProvider>
         </BrowserRouter>
     </>
   );
